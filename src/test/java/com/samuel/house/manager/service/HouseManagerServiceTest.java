@@ -91,7 +91,6 @@ public class HouseManagerServiceTest {
 
     @org.junit.jupiter.api.Test
     public void tryToReadNonExistingHouse() {
-        underTest.getHouse(9999l);
         Assertions.assertThrows(HouseNotFoundException.class,
                 () -> underTest.getHouse(9999l));
     }
